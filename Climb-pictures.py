@@ -10,9 +10,7 @@ br = mechanize.Browser()
 STATIC_ROOT = os.path.join(os.path.dirname(__file__),'../image/')
 
 def get_page(url):
-    '''
-   »ñÈ¡Í¼Æ¬µÄurl 123
-    '''
+  
     try:
         html = br.open(url)
         soup = BeautifulSoup(html.read())

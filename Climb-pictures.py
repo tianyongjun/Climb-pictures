@@ -11,7 +11,7 @@ STATIC_ROOT = os.path.join(os.path.dirname(__file__),'../image/')
 
 def get_page(url):
     '''
-   获取图片的url
+   获取图片的url 123
     '''
     try:
         html = br.open(url)

@@ -10,7 +10,9 @@ br = mechanize.Browser()
 STATIC_ROOT = os.path.join(os.path.dirname(__file__),'../image/')
 
 def get_page(url):
-  
+  '''
+  获取下载的页数
+  '''
     try:
         html = br.open(url)
         soup = BeautifulSoup(html.read())
@@ -23,6 +25,9 @@ def get_page(url):
         raise e
 
 def get_title(url):
+    '''
+    获取下载网址的title
+    '''
     try:
         html = br.open(url)
         soup = BeautifulSoup(html.read())
@@ -69,6 +74,9 @@ def get_down_url(url):
         raise e
         
 def get_image_url(url,title):
+    '''
+    进入图片网址下载页
+    '''
     try:
         print u'进入图片网址下载页'
         m201304d='http://n.kukudm.com/'
@@ -82,6 +90,9 @@ def get_image_url(url,title):
 
 
 def save_image(url,title):
+    '''
+    开始下载图片
+    '''
     print u'开始下载图片'
     url = url.encode('utf-8')
 #     urllib.urlretrieve(url,os.path.join(title,os.path.basename(title)))
